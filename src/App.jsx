@@ -33,19 +33,19 @@ function App() {
         <div className="loading-skeleton"></div>
       </div>}
       <div>
-        <button type="button"
+        {showReset && <button type="button"
+          className='fadein'
           style={{
             position: 'fixed',
             top: '10px',
             left: '10px',
             zIndex: 2,
-            opacity: showReset ? 1 : 0,
           }}
           onClick={() => {
             window.location.reload()
           }}>
           Reset
-        </button>
+        </button>}
         <Spline
           onLoad={onLoad}
           style={{ width: '100vw', height: '100vh' }}
